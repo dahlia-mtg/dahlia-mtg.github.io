@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dahlia-mtg.github.io/dahlia.github.io/sitemap.xml
