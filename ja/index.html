@@ -339,9 +339,41 @@
               </div>
             </article>
 
-            <article class="feature-card feature-card-wide feature-organize reveal">
+            <article class="feature-card feature-card-wide feature-screenshots reveal">
               <div class="feature-copy">
                 <span class="feature-number">05</span>
+                <h3>画面の変化も、会話と一緒に。</h3>
+                <p>録音中、選んだデスクトップやウィンドウを定期的に確認。画面が大きく変わったときだけ自動で保存し、AI議事録に視覚的な文脈も含められます。</p>
+                <div class="feature-tags"><span>自動取得</span><span>画面変化を検知</span><span>マルチモーダルAI</span></div>
+              </div>
+              <div class="screenshot-capture-visual" aria-hidden="true">
+                <div class="capture-settings-row">
+                  <span><i></i> 自動スクリーンショット</span>
+                  <b>30秒ごと</b>
+                  <em>変化率 20%</em>
+                </div>
+                <div class="capture-sequence">
+                  <div class="capture-frame">
+                    <div class="capture-slide capture-slide-a"><i></i><i></i><i></i></div>
+                    <span>00:00</span><b>保存</b>
+                  </div>
+                  <div class="capture-connector"><i></i><span>変化なし</span></div>
+                  <div class="capture-frame is-skipped">
+                    <div class="capture-slide capture-slide-a"><i></i><i></i><i></i></div>
+                    <span>00:30</span><b>スキップ</b>
+                  </div>
+                  <div class="capture-connector is-active"><i></i><span>変化</span></div>
+                  <div class="capture-frame">
+                    <div class="capture-slide capture-slide-b"><i></i><i></i><i></i></div>
+                    <span>01:00</span><b>保存</b>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="feature-card feature-card-wide feature-organize reveal">
+              <div class="feature-copy">
+                <span class="feature-number">06</span>
                 <h3>議事録を、使える知識に。</h3>
                 <p>ミーティングをプロジェクトやタグで整理。Markdown、Obsidian、Google Driveへ書き出して、チームの知識を育てられます。</p>
                 <div class="export-row" aria-label="対応する整理・共有先">
@@ -386,7 +418,7 @@
                 <div><span>00:16</span><p>共有体験を優先します。</p></div>
                 <i></i>
               </div>
-              <div class="step-copy"><small>TRANSCRIBE</small><h3>その場で文字に</h3><p>Apple Speechによるオンデバイス音声認識で、会話がリアルタイムに文字になります。</p></div>
+              <div class="step-copy"><small>TRANSCRIBE &amp; CAPTURE</small><h3>言葉も画面も、記録する</h3><p>Apple Speechで会話をデバイス上で文字にしながら、選んだ画面の大きな変化だけを自動で保存します。</p></div>
             </li>
             <li class="step reveal">
               <span class="step-number">3</span>
@@ -408,6 +440,7 @@
             <p>
               文字起こしはApple Speechを使ってデバイス上で処理。
               AI要約は、あなたが設定したOpenAI互換APIへだけ送信されます。
+              自動スクリーンショットは、録音中に選んだデスクトップやウィンドウだけを取得します。
             </p>
           </div>
           <div class="privacy-cards">
@@ -421,7 +454,7 @@
             </article>
             <article class="privacy-card reveal">
               <span class="privacy-icon" aria-hidden="true">⌂</span>
-              <div><h3>ローカルファイルで管理</h3><p>文字起こしと議事録は、選んだVaultやプロジェクトに整理できます。</p></div>
+              <div><h3>ローカルファイルで管理</h3><p>文字起こし、スクリーンショット、議事録は、選んだVaultやプロジェクトに整理できます。</p></div>
             </article>
           </div>
         </div>

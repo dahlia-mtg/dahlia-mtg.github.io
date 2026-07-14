@@ -339,9 +339,41 @@
               </div>
             </article>
 
-            <article class="feature-card feature-card-wide feature-organize reveal">
+            <article class="feature-card feature-card-wide feature-screenshots reveal">
               <div class="feature-copy">
                 <span class="feature-number">05</span>
+                <h3>Keep the screen with the conversation.</h3>
+                <p>While recording, Dahlia checks the desktop or window you choose and saves a screenshot only when the screen changes enough. That visual context can be included in multimodal AI summaries.</p>
+                <div class="feature-tags"><span>Auto capture</span><span>Change detection</span><span>Multimodal AI</span></div>
+              </div>
+              <div class="screenshot-capture-visual" aria-hidden="true">
+                <div class="capture-settings-row">
+                  <span><i></i> Automatic screenshots</span>
+                  <b>Every 30 sec</b>
+                  <em>20% change</em>
+                </div>
+                <div class="capture-sequence">
+                  <div class="capture-frame">
+                    <div class="capture-slide capture-slide-a"><i></i><i></i><i></i></div>
+                    <span>00:00</span><b>Saved</b>
+                  </div>
+                  <div class="capture-connector"><i></i><span>No change</span></div>
+                  <div class="capture-frame is-skipped">
+                    <div class="capture-slide capture-slide-a"><i></i><i></i><i></i></div>
+                    <span>00:30</span><b>Skipped</b>
+                  </div>
+                  <div class="capture-connector is-active"><i></i><span>Changed</span></div>
+                  <div class="capture-frame">
+                    <div class="capture-slide capture-slide-b"><i></i><i></i><i></i></div>
+                    <span>01:00</span><b>Saved</b>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="feature-card feature-card-wide feature-organize reveal">
+              <div class="feature-copy">
+                <span class="feature-number">06</span>
                 <h3>Turn meeting notes into knowledge.</h3>
                 <p>Organize meetings with projects and tags. Export to Markdown, Obsidian, or Google Drive to grow your team’s shared knowledge.</p>
                 <div class="export-row" aria-label="Supported organization and export destinations">
@@ -386,7 +418,7 @@
                 <div><span>00:16</span><p>Let’s prioritize sharing.</p></div>
                 <i></i>
               </div>
-              <div class="step-copy"><small>TRANSCRIBE</small><h3>Transcribe in real time</h3><p>Apple Speech turns the conversation into text in real time with on-device recognition.</p></div>
+              <div class="step-copy"><small>TRANSCRIBE &amp; CAPTURE</small><h3>Keep words and visuals</h3><p>Apple Speech transcribes on device while Dahlia automatically saves meaningful screen changes from the source you choose.</p></div>
             </li>
             <li class="step reveal">
               <span class="step-number">3</span>
@@ -408,6 +440,7 @@
             <p>
               Transcription is processed on device with Apple Speech.
               AI summaries are sent only to the OpenAI-compatible API you configure.
+              Automatic screenshots capture only the desktop or window you choose, and only while recording.
             </p>
           </div>
           <div class="privacy-cards">
@@ -421,7 +454,7 @@
             </article>
             <article class="privacy-card reveal">
               <span class="privacy-icon" aria-hidden="true">⌂</span>
-              <div><h3>Manage local files</h3><p>Organize transcripts and notes in the vaults and projects you choose.</p></div>
+              <div><h3>Manage local files</h3><p>Organize transcripts, screenshots, and notes in the vaults and projects you choose.</p></div>
             </article>
           </div>
         </div>
