@@ -121,99 +121,123 @@
               <span><b>AI summary</b><small>要点を整理しました</small></span>
             </div>
             <div class="floating-note note-two" aria-hidden="true">
-              <span class="live-dot"></span>
-              <span><b>Recording</b><small>マイク + システム音声</small></span>
+              <span class="menu-note-icon">⌁</span>
+              <span><b>Menu bar ready</b><small>どこからでも録音を開始</small></span>
             </div>
 
             <div class="mac-window">
               <div class="window-bar">
                 <div class="traffic-lights" aria-hidden="true"><i></i><i></i><i></i></div>
-                <div class="window-title">
-                  <img src="assets/app-icon.png" alt="" width="20" height="20" />
-                  <span>Dahlia</span>
+                <div class="window-tools" aria-hidden="true">
+                  <span>▤</span><span>□</span><span>▦</span><span>▭</span><span>⚙</span>
                 </div>
-                <div class="window-actions" aria-hidden="true">＋ &nbsp; ◌ &nbsp; ⚙</div>
+                <div class="app-tabs" role="tablist" aria-label="Dahliaの表示内容">
+                  <button id="notes-tab" type="button" role="tab" tabindex="-1" aria-selected="false" aria-controls="notes-panel" data-app-tab="notes">ノート</button>
+                  <button id="screenshots-tab" type="button" role="tab" tabindex="-1" aria-selected="false" aria-controls="screenshots-panel" data-app-tab="screenshots">スクリーンショット</button>
+                  <button id="transcript-tab" type="button" role="tab" tabindex="-1" aria-selected="false" aria-controls="transcript-panel" data-app-tab="transcript">文字起こし</button>
+                  <button id="summary-tab" class="active" type="button" role="tab" aria-selected="true" aria-controls="summary-panel" data-app-tab="summary">要約</button>
+                </div>
+                <div class="window-actions" aria-hidden="true"><span>↥</span><span>✦</span><span class="window-record">◉</span></div>
               </div>
               <div class="window-body">
                 <aside class="app-sidebar">
-                  <div class="sidebar-heading"><span>ミーティング</span><b>＋</b></div>
-                  <div class="search-bar">⌕&nbsp;&nbsp;検索</div>
+                  <div class="search-bar">⌕&nbsp;&nbsp;ミーティングを検索…</div>
                   <small>今日</small>
                   <button class="meeting-row active" type="button" tabindex="-1">
-                    <i class="meeting-icon purple">●</i>
-                    <span><b>プロダクト定例</b><em>10:00 · 42分</em></span>
+                    <i class="meeting-icon purple">▥</i>
+                    <span><b>チーム定例</b><em>10:00&nbsp;&nbsp;32:18</em></span>
                   </button>
                   <button class="meeting-row" type="button" tabindex="-1">
-                    <i class="meeting-icon blue">●</i>
-                    <span><b>デザインレビュー</b><em>昨日 · 28分</em></span>
+                    <i class="meeting-icon blue">▥</i>
+                    <span><b>デザインレビュー</b><em>09:00&nbsp;&nbsp;28:42</em></span>
                   </button>
                   <button class="meeting-row" type="button" tabindex="-1">
-                    <i class="meeting-icon amber">●</i>
-                    <span><b>ユーザーインタビュー</b><em>7月8日 · 55分</em></span>
+                    <i class="meeting-icon amber">▥</i>
+                    <span><b>プロジェクト共有</b><em>昨日&nbsp;&nbsp;45:06</em></span>
                   </button>
                   <div class="sidebar-projects">
                     <small>プロジェクト</small>
-                    <p>▾ &nbsp; Dahlia</p>
-                    <p>　⌗ &nbsp; リサーチ</p>
-                    <p>　⌗ &nbsp; プロダクト</p>
+                    <p>▾ &nbsp; Product</p>
+                    <p>　⌗ &nbsp; Weekly</p>
+                    <p>　⌗ &nbsp; Research</p>
                   </div>
                 </aside>
 
                 <div class="app-main">
                   <div class="meeting-header">
                     <div>
-                      <small>今日 10:00–10:42</small>
-                      <h2>プロダクト定例</h2>
+                      <span class="demo-badge">デモデータ</span>
+                      <h2>チーム定例</h2>
                     </div>
-                    <div class="record-badge"><i></i> 00:42:18</div>
+                    <div class="record-badge"><i></i> 00:32:18</div>
                   </div>
-                  <div class="app-tabs" role="tablist" aria-label="表示内容">
-                    <button id="transcript-tab" type="button" role="tab" aria-selected="false" aria-controls="transcript-panel" data-app-tab="transcript">文字起こし</button>
-                    <button id="summary-tab" class="active" type="button" role="tab" aria-selected="true" aria-controls="summary-panel" data-app-tab="summary">AI要約</button>
+                  <div class="meeting-meta" aria-hidden="true">
+                    <span>▦ 今日 10:00 · 32:18</span><span>▭ Product / Weekly⌄</span>
+                  </div>
+                  <div class="meeting-tags" aria-hidden="true">
+                    <span>● weekly</span><span>● roadmap</span><span>● design</span><b>◇ タグを追加</b>
                   </div>
 
                   <div id="summary-panel" class="app-panel" role="tabpanel" aria-labelledby="summary-tab" data-app-panel="summary">
+                    <div class="summary-toolbar" aria-hidden="true"><span>▣ Obsidianで開く</span><span>◎ ブラウザで開く</span></div>
                     <div class="summary-intro">
                       <span class="sparkle">✦</span>
-                      <div><b>AI議事録</b><small>42分の会議を要約 · たった今</small></div>
+                      <div><b>チーム定例：優先順位と次のアクション</b><small>32分の会議を要約 · たった今</small></div>
                     </div>
                     <div class="summary-block">
-                      <h3>今回の結論</h3>
-                      <p>次期リリースでは、会議終了後の共有フローを優先して改善する。</p>
+                      <h3>概要</h3>
+                      <p>次回リリースの優先順位と、チーム内の担当範囲を確認しました。<em>00:01:12</em></p>
                     </div>
                     <div class="summary-block">
                       <h3>決定事項</h3>
                       <ul>
-                        <li><i>✓</i><span>要約フォーマットをプロジェクトごとに設定可能にする</span></li>
-                        <li><i>✓</i><span>共有先としてGoogle Driveを追加する</span></li>
-                        <li><i>✓</i><span>ベータ版を来週火曜にチームへ展開する</span></li>
+                        <li><i>✓</i><span>利用状況を確認してから公開範囲を決める <em>00:08:24</em></span></li>
+                        <li><i>✓</i><span>次回までに共有テンプレートを更新する <em>00:16:40</em></span></li>
                       </ul>
                     </div>
                     <div class="action-card">
-                      <div><span>次のアクション</span><b>3</b></div>
-                      <p><i></i> 共有テンプレートの初稿を作成 <small>田中 · 7/14</small></p>
-                      <p><i></i> ベータ版の案内文を準備 <small>佐藤 · 7/15</small></p>
+                      <div><span>次のアクション</span><b>2</b></div>
+                      <p><i></i> 共有テンプレートを更新 <small>次回まで</small></p>
+                      <p><i></i> フィードバックを整理 <small>今週中</small></p>
                     </div>
                   </div>
 
                   <div id="transcript-panel" class="app-panel transcript-panel" role="tabpanel" aria-labelledby="transcript-tab" data-app-panel="transcript" hidden>
                     <div class="transcript-line">
-                      <time>00:38:12</time><span class="speaker speaker-a">田</span>
-                      <p><b>田中</b>では次期リリースでは、まず共有フローを優先しましょう。</p>
+                      <time>00:28:12</time><span class="speaker speaker-a">マイク</span>
+                      <p>次回リリースでは、共有までの流れを優先して確認しましょう。</p>
                     </div>
                     <div class="transcript-line">
-                      <time>00:38:24</time><span class="speaker speaker-b">佐</span>
-                      <p><b>佐藤</b>賛成です。テンプレートの初稿は今週中に用意します。</p>
+                      <time>00:28:24</time><span class="speaker speaker-b">システム</span>
+                      <p>まずは利用状況を見てから、公開範囲を決めるのが良さそうです。</p>
                     </div>
                     <div class="transcript-line">
-                      <time>00:39:03</time><span class="speaker speaker-c">鈴</span>
-                      <p><b>鈴木</b>Google Driveへの書き出しも一緒に試せると良さそうです。</p>
+                      <time>00:29:03</time><span class="speaker speaker-a">マイク</span>
+                      <p>共有テンプレートの更新も、次回までに進めます。</p>
                     </div>
                     <div class="transcript-line current">
-                      <time>00:42:18</time><span class="speaker speaker-a">田</span>
-                      <p><b>田中</b>では担当と期限を確認して、今日は終わりにしましょう。<i></i></p>
+                      <time>00:32:18</time><span class="speaker speaker-b">システム</span>
+                      <p>担当と期限を確認して、今日は終わりにしましょう。<i></i></p>
                     </div>
                     <div class="listening-line"><i></i> 音声を認識しています…</div>
+                  </div>
+
+                  <div id="screenshots-panel" class="app-panel screenshots-panel" role="tabpanel" aria-labelledby="screenshots-tab" data-app-panel="screenshots" hidden>
+                    <div class="shot-grid" aria-label="架空のスクリーンショット例">
+                      <div class="shot-card"><div class="shot-art shot-art-a"><i></i><i></i><i></i></div><span>00:04:16</span></div>
+                      <div class="shot-card"><div class="shot-art shot-art-b"><i></i><i></i><i></i></div><span>00:11:43</span></div>
+                      <div class="shot-card"><div class="shot-art shot-art-c"><i></i><i></i><i></i></div><span>00:18:27</span></div>
+                      <div class="shot-card"><div class="shot-art shot-art-d"><i></i><i></i><i></i></div><span>00:26:05</span></div>
+                    </div>
+                  </div>
+
+                  <div id="notes-panel" class="app-panel notes-panel" role="tabpanel" aria-labelledby="notes-tab" data-app-panel="notes" hidden>
+                    <div class="notes-paper">
+                      <span>会議中のメモ</span>
+                      <p>・次回リリースの優先順位を確認</p>
+                      <p>・共有テンプレートを更新</p>
+                      <p>・フィードバックを次回までに整理</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -291,9 +315,32 @@
               </div>
             </article>
 
-            <article class="feature-card feature-card-wide feature-organize reveal">
+            <article class="feature-card feature-card-wide feature-menubar reveal">
               <div class="feature-copy">
                 <span class="feature-number">04</span>
+                <h3>メニューバーから、すぐ操作。</h3>
+                <p>ウインドウを開かなくても録音やライブ字幕を開始。マイク、システム音声、言語、収録ソースも、その場で切り替えられます。</p>
+                <div class="feature-tags"><span>Quick record</span><span>Live captions</span><span>Audio source</span></div>
+              </div>
+              <div class="menubar-visual" aria-hidden="true">
+                <div class="mac-menu-strip"><span>●</span><b>▥</b><b>✺</b><b>G</b><b>◉</b></div>
+                <div class="menu-popover">
+                  <p><i>◉</i> 録音を開始</p>
+                  <p><i>▤</i> ライブ字幕</p>
+                  <hr />
+                  <p><i>♩</i> マイク <b>›</b></p>
+                  <p><i>◖</i> システム音声 <b>›</b></p>
+                  <p><i>◎</i> 言語 <b>›</b></p>
+                  <p><i>▣</i> ソース <b>›</b></p>
+                  <hr />
+                  <p><i>□</i> Dahliaを開く</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="feature-card feature-card-wide feature-organize reveal">
+              <div class="feature-copy">
+                <span class="feature-number">05</span>
                 <h3>議事録を、使える知識に。</h3>
                 <p>ミーティングをプロジェクトやタグで整理。Markdown、Obsidian、Google Driveへ書き出して、チームの知識を育てられます。</p>
                 <div class="export-row" aria-label="対応する整理・共有先">
@@ -329,7 +376,7 @@
                 <span class="record-ring"><i></i></span>
                 <p>クリックして記録</p>
               </div>
-              <div class="step-copy"><small>RECORD</small><h3>会議を始める</h3><p>予定を選ぶか、新しいミーティングを作成。ボタンひとつで記録を開始します。</p></div>
+              <div class="step-copy"><small>RECORD</small><h3>会議を始める</h3><p>予定を選ぶか、メニューバーからすぐ開始。ウインドウを開かなくても記録できます。</p></div>
             </li>
             <li class="step reveal">
               <span class="step-number">2</span>
@@ -369,7 +416,7 @@
             </article>
             <article class="privacy-card reveal">
               <span class="privacy-icon" aria-hidden="true">⌁</span>
-              <div><h3>接続先を自分で選べる</h3><p>OpenAI、Databricks、カスタムエンドポイントに対応。</p></div>
+              <div><h3>接続先を自分で選べる</h3><p>OpenAI互換APIやカスタムエンドポイントに対応。</p></div>
             </article>
             <article class="privacy-card reveal">
               <span class="privacy-icon" aria-hidden="true">⌂</span>

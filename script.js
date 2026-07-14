@@ -33,19 +33,28 @@ document.addEventListener("keydown", (event) => {
 const appTabs = [...document.querySelectorAll("[data-app-tab]")];
 const appPanels = [...document.querySelectorAll("[data-app-panel]")];
 
-appTabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    const selected = tab.dataset.appTab;
+const activateAppTab = (selectedTab) => {
+  appTabs.forEach((tab) => {
+    const isActive = tab === selectedTab;
+    tab.classList.toggle("active", isActive);
+    tab.setAttribute("aria-selected", String(isActive));
+    tab.tabIndex = isActive ? 0 : -1;
+  });
 
-    appTabs.forEach((item) => {
-      const isActive = item === tab;
-      item.classList.toggle("active", isActive);
-      item.setAttribute("aria-selected", String(isActive));
-    });
+  appPanels.forEach((panel) => {
+    panel.hidden = panel.dataset.appPanel !== selectedTab.dataset.appTab;
+  });
+};
 
-    appPanels.forEach((panel) => {
-      panel.hidden = panel.dataset.appPanel !== selected;
-    });
+appTabs.forEach((tab, index) => {
+  tab.addEventListener("click", () => activateAppTab(tab));
+  tab.addEventListener("keydown", (event) => {
+    if (!["ArrowLeft", "ArrowRight"].includes(event.key)) return;
+    event.preventDefault();
+    const direction = event.key === "ArrowRight" ? 1 : -1;
+    const nextTab = appTabs[(index + direction + appTabs.length) % appTabs.length];
+    activateAppTab(nextTab);
+    nextTab.focus();
   });
 });
 
