@@ -1,6 +1,10 @@
 const header = document.querySelector("[data-header]");
 const navToggle = document.querySelector("[data-nav-toggle]");
 const nav = document.querySelector("[data-nav]");
+const isJapanese = document.documentElement.lang === "ja";
+const navLabels = isJapanese
+  ? { open: "メニューを開く", close: "メニューを閉じる" }
+  : { open: "Open menu", close: "Close menu" };
 
 const updateHeader = () => {
   header?.classList.toggle("scrolled", window.scrollY > 16);
@@ -11,7 +15,7 @@ window.addEventListener("scroll", updateHeader, { passive: true });
 
 const closeNav = () => {
   navToggle?.setAttribute("aria-expanded", "false");
-  navToggle?.setAttribute("aria-label", "メニューを開く");
+  navToggle?.setAttribute("aria-label", navLabels.open);
   nav?.classList.remove("open");
   document.body.classList.remove("nav-open");
 };
@@ -19,7 +23,7 @@ const closeNav = () => {
 navToggle?.addEventListener("click", () => {
   const isOpen = navToggle.getAttribute("aria-expanded") === "true";
   navToggle.setAttribute("aria-expanded", String(!isOpen));
-  navToggle.setAttribute("aria-label", isOpen ? "メニューを開く" : "メニューを閉じる");
+  navToggle.setAttribute("aria-label", isOpen ? navLabels.open : navLabels.close);
   nav?.classList.toggle("open", !isOpen);
   document.body.classList.toggle("nav-open", !isOpen);
 });
