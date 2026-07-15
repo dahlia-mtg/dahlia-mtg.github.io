@@ -79,6 +79,39 @@ img {
   margin-inline: auto;
 }
 
+.heading-line,
+.copy-line {
+  display: block;
+}
+
+.mobile-copy-line {
+  display: inline;
+}
+
+html[lang="ja"] :where(h1, h2, h3) {
+  text-wrap: balance;
+}
+
+html[lang="ja"] p {
+  text-wrap: pretty;
+}
+
+html[lang="ja"] .hero h1 {
+  font-size: clamp(52px, 5.1vw, 76px);
+  line-height: 1.06;
+  letter-spacing: -0.055em;
+}
+
+html[lang="ja"] .statement {
+  font-size: clamp(44px, 5.7vw, 76px);
+  line-height: 1.12;
+  letter-spacing: -0.05em;
+}
+
+html[lang="ja"] :where(.section-heading h2, .ai-heading h2, .workflow-heading h2, .privacy-copy h2) {
+  letter-spacing: -0.045em;
+}
+
 .site-header {
   position: fixed;
   inset: 0 0 auto;
@@ -265,13 +298,18 @@ img {
   font-weight: 780;
 }
 
-.hero h1 span {
+.hero h1 .hero-accent {
   display: inline-block;
   margin-inline: 0.06em;
   color: transparent;
   background: linear-gradient(135deg, var(--violet) 15%, var(--magenta) 85%);
   -webkit-background-clip: text;
   background-clip: text;
+}
+
+.hero h1 > .heading-line,
+.statement > .heading-line {
+  white-space: nowrap;
 }
 
 .hero-lead {
@@ -1061,7 +1099,7 @@ img {
   letter-spacing: -0.065em;
 }
 
-.statement span {
+.statement .statement-muted {
   color: #8a7f90;
 }
 
@@ -2429,6 +2467,7 @@ img {
   .nav-toggle[aria-expanded="true"] span { background: white; }
   .hero { padding: 115px 0 36px; }
   .hero h1 { font-size: clamp(49px, 13vw, 70px); }
+  html[lang="ja"] .hero h1 { font-size: clamp(49px, 13vw, 70px); }
   .hero-lead { font-size: 14px; }
   .desktop-break { display: none; }
   .product-stage { width: 100%; margin-top: 10px; padding-bottom: 30px; }
@@ -2458,6 +2497,7 @@ img {
 }
 
 @media (max-width: 600px) {
+  .mobile-copy-line { display: block; }
   .hero-actions { align-items: flex-start; flex-direction: column; gap: 18px; }
   .hero-meta { max-width: 320px; }
   .product-stage { width: 128%; margin-left: -14%; padding-top: 45px; }
@@ -2479,6 +2519,7 @@ img {
   .sidebar-projects { display: none; }
   .proof-strip { gap: 9px; padding-top: 16px; font-size: 9px; }
   .statement { font-size: 43px; }
+  html[lang="ja"] .statement { font-size: 43px; }
   .bento-grid { grid-template-columns: 1fr; }
   .feature-card, .feature-card-wide, .feature-support { grid-column: auto; }
   .feature-card { min-height: 420px; border-radius: 27px; }
